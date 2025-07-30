@@ -4,7 +4,7 @@
 <h3>Building your own static site generator</h3>
 <p>I had this idea why not start this blog as a project in itself. That's why I have decided to make a static site generator using Python and we will use it to generate this blog.
 My idea is to build the generator step by step and version the app and use our blog as a demo for each version. All the versions are available on <a href="https://github.com/1morepi/sswipy">Github</a> and have their own pages so that 
-readers and can follow and see for themselves how are things working. This project could be really valuable for beginners as it involves the use of python modules and file operations. Readers will also get to know how static site generators work.
+readers and can follow and see for themselves how things are working. This project could be really valuable for beginners as it involves the use of python modules and file operations. Readers will also get to know how static site generators work.
 <br>
 Let's get started!</p>
 <h3>The initial layout; version 0.0</h3>
@@ -33,10 +33,11 @@ with open('output/index.html', 'w') as f:
     f.write(html) #writes the content in html variable to our desired file
 </code></pre>
 <h4>Final step, copying images</h4>
-<p>If we want our images to show up on our generated html page, we have to copy the image files to the ouput directory for the html file to detect it. We can use the python os and shutil modules to help us out:
-    import shutil
-    import os</p>
-<pre><code>source_dir = "content"
+<p>If we want our images to show up on our generated html page, we have to copy the image files to the ouput directory for the html file to detect it. We can use the python os and shutil modules to help us out:</p>
+<pre><code>import shutil
+import os
+
+source_dir = "content"
 dest_dir = "output/images"
 # Copy all image files
 for filename in os.listdir(source_dir):
@@ -51,7 +52,7 @@ The desired output files should now be genarated after running the code above. Y
 python -m http.server
 </code></pre>
 <p>Then open your browser and go to http://localhost:8000</p>
-<p><a href="">Here's the link to the version 0.0</a></p>
+<p><a href="https://1morepi.com/v00/">Here's the link to the blog generated using version 0.0 of our program</a></p>
 <footer>
   &copy; 2025 1morepi. All rights reserved. <a href="https://github.com/1morepi">Github</a> 
 </footer>
